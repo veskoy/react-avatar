@@ -283,7 +283,8 @@ class Avatar extends React.Component {
       y: crop.y() - crop.radius(),
       width: crop.radius() * 2,
       height: crop.radius() * 2,
-      pixelRatio: 1 / this.scale
+      pixelRatio: 1 / this.scale,
+      quality: 1
     });
 
     const onScaleCallback = (scaleY) => {
