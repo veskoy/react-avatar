@@ -178,11 +178,11 @@ class Avatar extends React.Component {
     e.preventDefault();
 
     this.onBeforeFileLoadCallback(e);
-    if(!e.target.value) return;
+    if (!e.target.value) return;
 
     let reader = new FileReader();
     let file = e.target.files[0];
-    
+
     this.onFileLoadCallback(file);
 
     const image = new Image();
@@ -282,7 +282,8 @@ class Avatar extends React.Component {
       x: crop.x() - crop.radius(),
       y: crop.y() - crop.radius(),
       width: crop.radius() * 2,
-      height: crop.radius() * 2
+      height: crop.radius() * 2,
+      pixelRatio: 1 / this.scale
     });
 
     const onScaleCallback = (scaleY) => {
